@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - viriklogistics_shortage_test@localhost" uuid="fac86157-ca70-4b28-b7ce-3f7b75fce57c">
+    <database-info product="MySQL" version="5.6.17" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="viriklogistics_shortage_test"/>
+    <table name="account_titles" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="title" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12"/>
+      <column name="type" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="secondary_type" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="accounting_year" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="from" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="admin" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" autoIncrement="true"/>
+      <column name="username" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="role" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="Mg=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="bills" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="billed_date_time" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="calculation_sheet_view" schema="" catalog="viriklogistics_shortage_test" type="VIEW">
+      <column name="trip_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="trip_detail_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="shortage_quantity" sqlType="DOUBLE" precision="22" scale="0" nullable="true" jdbcType="8"/>
+      <column name="shortage_rate" sqlType="DOUBLE" precision="22" scale="0" nullable="true" jdbcType="8"/>
+      <column name="shortage_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="dis_qty" sqlType="DOUBLE" precision="22" scale="0" nullable="true" jdbcType="8"/>
+      <column name="rec_qty" sqlType="DOUBLE" precision="22" scale="0" nullable="true" jdbcType="8"/>
+      <column name="source_city_name" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="source_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="destination_city_name" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="destination_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="invoice_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91" def="JzAwMDAtMDAtMDAn"/>
+      <column name="invoice_number" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="company_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="customer_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="contractor_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="product_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="tanker_number" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="contractor_name" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="company_name" sqlType="VARCHAR" precision="150" scale="0" nullable="true" jdbcType="12"/>
+      <column name="customer_freight_unit" sqlType="DOUBLE" precision="10" scale="6" nullable="true" jdbcType="8" def="MC4wMDAwMDA="/>
+      <column name="company_freight_unit" sqlType="DOUBLE" precision="15" scale="6" nullable="true" jdbcType="8" def="MC4wMDAwMDA="/>
+      <column name="wht" sqlType="FLOAT" precision="12" scale="0" nullable="true" jdbcType="7" def="MA=="/>
+      <column name="product_type" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="productName" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="entryDate" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="stn_number" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="bill_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="product" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="detail_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="tax" sqlType="FLOAT" precision="12" scale="0" nullable="true" jdbcType="7" def="MA=="/>
+    </table>
+    <table name="carriage_contractors" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="idCard" sqlType="VARCHAR" precision="17" scale="0" nullable="false" jdbcType="12" def="JzAn"/>
+      <column name="phone" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12" def="JzAn"/>
+      <column name="email" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="JzAn"/>
+      <column name="address" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12" def="JzAn"/>
+      <column name="image" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="entryDate" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="cities" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="cityName" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="companies" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="150" scale="0" nullable="true" jdbcType="12"/>
+      <column name="phone" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12" def="JzAn"/>
+      <column name="email" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="JzAn"/>
+      <column name="address" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12" def="JzAn"/>
+      <column name="image" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="entryDate" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91" def="JzAwMDAtMDAtMDAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="company_accounts" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="trip_detail_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="company_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="payment_date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="amount" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8" def="MA=="/>
+      <column name="entryDate" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="contractor_accounts" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="trip_detail_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="contractor_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="payment_date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91" def="JzAwMDAtMDAtMDAn"/>
+      <column name="amount" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8" def="MA=="/>
+      <column name="entryDate" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="contractor_company_commissions" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="contractor_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="company_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="commission_1" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7"/>
+      <column name="commission_2" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7"/>
+      <column name="commission_3" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7"/>
+      <column name="wht" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7" def="MA=="/>
+      <column name="entryDate" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="contractor_customer_commissions" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="contractor_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="customer_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="freight_commission" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7"/>
+      <column name="commission_1" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7"/>
+      <column name="commission_2" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7"/>
+      <column name="entryDate" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="customer_accounts" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="trip_detail_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="customer_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="payment_date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91" def="JzAwMDAtMDAtMDAn"/>
+      <column name="amount" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8" def="MA=="/>
+      <column name="entryDate" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="customers" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="idCard" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="phone" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12" def="JzAn"/>
+      <column name="email" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="JzAn"/>
+      <column name="address" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12" def="JzAn"/>
+      <column name="image" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="entryDate" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="decanding_shortages_view" schema="" catalog="viriklogistics_shortage_test" type="VIEW">
+      <column name="trip_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="trip_entry_date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="shortage_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="trip_detail_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="quantity" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8" def="MA=="/>
+      <column name="rate" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8" def="MA=="/>
+      <column name="shortage_amount" sqlType="DOUBLE" precision="19" scale="2" nullable="false" jdbcType="8" def="MC4wMA=="/>
+      <column name="date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="source" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="destination" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="product_name" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="customer_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="customer_name" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="companies_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="company_name" sqlType="VARCHAR" precision="150" scale="0" nullable="true" jdbcType="12"/>
+      <column name="contractor_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="contractor_name" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="committed" sqlType="VARCHAR" precision="1" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+    </table>
+    <table name="destination_shortages_view" schema="" catalog="viriklogistics_shortage_test" type="VIEW">
+      <column name="trip_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="trip_entry_date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="shortage_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="trip_detail_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="quantity" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8" def="MA=="/>
+      <column name="rate" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8" def="MA=="/>
+      <column name="shortage_amount" sqlType="DOUBLE" precision="19" scale="2" nullable="false" jdbcType="8" def="MC4wMA=="/>
+      <column name="date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="source" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="destination" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="product_name" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="customer_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="customer_name" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="companies_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="company_name" sqlType="VARCHAR" precision="150" scale="0" nullable="true" jdbcType="12"/>
+      <column name="contractor_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="contractor_name" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="committed" sqlType="VARCHAR" precision="1" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
+    </table>
+    <table name="drivers" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="idCard" sqlType="VARCHAR" precision="17" scale="0" nullable="false" jdbcType="12" def="JzAn"/>
+      <column name="phone" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12" def="JzAn"/>
+      <column name="email" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12" def="JzAn"/>
+      <column name="address" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12" def="JzAn"/>
+      <column name="image" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="entryDate" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="drivers_expenses" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="driver_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="description" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12"/>
+      <column name="expense" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7" def="MA=="/>
+      <column name="expense_date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91" def="JzAwMDAtMDAtMDAn"/>
+      <column name="entryDate" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="freight_history" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="route_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="freight" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7"/>
+      <column name="entryDate" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="freights" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="route_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="freight" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7"/>
+      <column name="startDate" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="endDate" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="incomplete_trips_view" schema="" catalog="viriklogistics_shortage_test" type="VIEW">
+      <column name="trip_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="tanker_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="entryDate" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="source_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="source" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="destination_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="destination" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="product_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="product" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="customer_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="contractor_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="company_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+    </table>
+    <table name="other_agents" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="idCard" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="phone" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="address" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12"/>
+      <column name="image" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="entryDate" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="other_tankers_expenses" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tanker_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="description" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12"/>
+      <column name="amount" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7"/>
+      <column name="expense_date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="entryDate" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="products" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="productName" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="type" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="routes" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="source" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="destination" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="product" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="freight" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7"/>
+      <column name="entryDate" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="type" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="active" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="shortages" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="trip_detail_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="quantity" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8" def="MA=="/>
+      <column name="rate" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8" def="MA=="/>
+      <column name="date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="type" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="shortages_ibfk_1" columns="trip_detail_id" ref-table="trips_details" ref-schema="" ref-catalog="viriklogistics_shortage_test" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+      <index name="trip_detail_id_2" unique="true" columns="trip_detail_id,type"/>
+    </table>
+    <table name="sort" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="sorty_by" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="order_by" sqlType="VARCHAR" precision="5" scale="0" nullable="true" jdbcType="12"/>
+      <column name="view" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="sorting" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="module" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="detail" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="system_settings" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="title" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="value" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12"/>
+      <column name="data_type" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="tankers" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="customerId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="truck_number" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="engine_number" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="chase_number" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="fitness_certificate" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="capacity" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="entryDate" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="tankers_status_view" schema="" catalog="viriklogistics_shortage_test" type="VIEW">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="customerId" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="truck_number" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="engine_number" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="chase_number" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="fitness_certificate" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="capacity" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="entryDate" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="source" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="destination" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="product" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="customer" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="trip_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="trip_entry_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="product_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="bze" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+    </table>
+    <table name="test_table" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="trial_balance_settings" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="group_by" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="status" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="trip_detail_voucher_relation" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="voucher_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="trip_detail_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="trip_types" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="trip_type" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="trip_sub_type" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="trips" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="customer_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="contractor_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="company_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="tanker_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="contractor_commission" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7"/>
+      <column name="contractor_commission_1" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7" def="MA=="/>
+      <column name="contractor_commission_2" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7" def="MA=="/>
+      <column name="company_commission_1" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7" def="MA=="/>
+      <column name="company_commission_2" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7" def="MA=="/>
+      <column name="company_commission_3" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7" def="MA=="/>
+      <column name="company_wht" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7" def="MA=="/>
+      <column name="other_taxes" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7" def="MA=="/>
+      <column name="email_date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91" def="JzAwMDAtMDAtMDAn"/>
+      <column name="filling_date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91" def="JzAwMDAtMDAtMDAn"/>
+      <column name="receiving_date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91" def="JzAwMDAtMDAtMDAn"/>
+      <column name="stn_receiving_date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91" def="JzAwMDAtMDAtMDAn"/>
+      <column name="decanding_date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91" def="JzAwMDAtMDAtMDAn"/>
+      <column name="driver_id_1" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="driver_id_2" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="driver_id_3" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="invoice_date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91" def="JzAwMDAtMDAtMDAn"/>
+      <column name="invoice_number" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="start_meter" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="end_meter" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="fuel_consumed" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7" def="MA=="/>
+      <column name="entryDate" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="type" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <column name="active" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="trips_detail_for_manage_accounts" schema="" catalog="viriklogistics_shortage_test" type="VIEW">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="trip_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="source" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="destination" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="product" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="product_quantity" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="qty_at_destination" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="qty_after_decanding" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="price_unit" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7"/>
+      <column name="freight_unit" sqlType="DOUBLE" precision="10" scale="6" nullable="false" jdbcType="8" def="MC4wMDAwMDA="/>
+      <column name="company_freight_unit" sqlType="DOUBLE" precision="15" scale="6" nullable="false" jdbcType="8" def="MC4wMDAwMDA="/>
+      <column name="stn_number" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="shortage_voucher" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="bill_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+    </table>
+    <table name="trips_details" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="trip_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="source" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="destination" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="product" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="product_quantity" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="qty_at_destination" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="qty_after_decanding" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="price_unit" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7"/>
+      <column name="freight_unit" sqlType="DOUBLE" precision="10" scale="6" nullable="false" jdbcType="8" def="MC4wMDAwMDA="/>
+      <column name="company_freight_unit" sqlType="DOUBLE" precision="15" scale="6" nullable="false" jdbcType="8" def="MC4wMDAwMDA="/>
+      <column name="stn_number" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="shortage_voucher_dest" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="shortage_voucher_decnd" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="bill_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="shortages_ibfk_1" table="shortages" schema="" catalog="viriklogistics_shortage_test" columns="trip_detail_id"/>
+    </table>
+    <table name="trips_details_and_dest_decnd_ids" schema="" catalog="viriklogistics_shortage_test" type="VIEW">
+      <column name="trip_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="trip_detail_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="dest_shortage_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="decnd_shortage_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+    </table>
+    <table name="trips_details_upper_layer_view" schema="" catalog="viriklogistics_shortage_test" type="VIEW">
+      <column name="trip_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="trip_detail_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" def="MA=="/>
+      <column name="shortage_quantity" sqlType="DOUBLE" precision="22" scale="0" nullable="true" jdbcType="8"/>
+      <column name="shortage_rate" sqlType="DOUBLE" precision="22" scale="0" nullable="true" jdbcType="8"/>
+      <column name="shortage_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="dis_qty" sqlType="DOUBLE" precision="22" scale="0" nullable="true" jdbcType="8"/>
+      <column name="rec_qty" sqlType="DOUBLE" precision="22" scale="0" nullable="true" jdbcType="8"/>
+      <column name="source_city_name" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="source_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="destination_city_name" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="destination_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="invoice_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91" def="JzAwMDAtMDAtMDAn"/>
+      <column name="invoice_number" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="company_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="customer_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="contractor_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="product_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="tanker_number" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="contractor_name" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="customer_name" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="company_name" sqlType="VARCHAR" precision="150" scale="0" nullable="true" jdbcType="12"/>
+      <column name="customer_freight_unit" sqlType="DOUBLE" precision="10" scale="6" nullable="true" jdbcType="8" def="MC4wMDAwMDA="/>
+      <column name="company_freight_unit" sqlType="DOUBLE" precision="15" scale="6" nullable="true" jdbcType="8" def="MC4wMDAwMDA="/>
+      <column name="wht" sqlType="FLOAT" precision="12" scale="0" nullable="true" jdbcType="7" def="MA=="/>
+      <column name="product_type" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="productName" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="entryDate" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="tanker_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="stn_number" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="bill_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="type" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6" def="MQ=="/>
+    </table>
+    <table name="trips_drivers_expenses" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="driver_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="trip_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="expense_date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="description" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12"/>
+      <column name="amount" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7"/>
+      <column name="entryDate" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="trips_tankers_expenses" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tanker_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="trip_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="expense_date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="description" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12"/>
+      <column name="amount" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7"/>
+      <column name="entryDate" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="trips_view" schema="" catalog="viriklogistics_shortage_test" type="VIEW">
+      <column name="trip_id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="entryDate" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="tanker_number" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="capacity" sqlType="DOUBLE" precision="22" scale="0" nullable="true" jdbcType="8"/>
+      <column name="customer_name" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="company_name" sqlType="VARCHAR" precision="150" scale="0" nullable="true" jdbcType="12"/>
+      <column name="contractor_name" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="customer_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="company_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="contractor_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="source" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="destination" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="product" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="source_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="destination_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="product_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="product_quantity" sqlType="DOUBLE" precision="22" scale="0" nullable="true" jdbcType="8"/>
+      <column name="stn_number" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="trip_type_id" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6" def="MQ=="/>
+      <column name="trip_type" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="trip_sub_type" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="trips_with_no_shortage_given_view" schema="" catalog="viriklogistics_shortage_test" type="VIEW">
+      <column name="trip_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="trip_entry_date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="detail_id" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5" def="MA=="/>
+      <column name="dest_shrt_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="decnd_shrt_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="source" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="destination" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="product_name" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="truck_number" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="customer" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="company" sqlType="VARCHAR" precision="150" scale="0" nullable="true" jdbcType="12"/>
+      <column name="contractor" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="voucher_entry" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="ac_type" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="account_title_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="description" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="related_other_agent" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="related_customer" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="related_contractor" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="related_company" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="credit_amount" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="debit_amount" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="dr_cr" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="journal_voucher_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="voucher_entry_ibfk_1" columns="journal_voucher_id" ref-table="voucher_journal" ref-schema="" ref-catalog="viriklogistics_shortage_test" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+    </table>
+    <table name="voucher_journal" schema="" catalog="viriklogistics_shortage_test" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="voucher_date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="detail" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="person_tid" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="trip_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="trip_product_detail_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="tanker_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="driver_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="other_tid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="voucher_type" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="shortage_quantity" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="shortage_rate" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="price_unit" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
+      <column name="shortage_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="entryDate" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <column name="transaction_column" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="manage_account_type" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="auto_generated" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="ignored" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="active" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MQ=="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="voucher_entry_ibfk_1" table="voucher_entry" schema="" catalog="viriklogistics_shortage_test" columns="journal_voucher_id"/>
+      <index name="shortage_id_index" unique="false" columns="shortage_id"/>
+    </table>
+  </data-source>
+</component>
